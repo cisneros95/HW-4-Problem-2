@@ -10,32 +10,45 @@ namespace HW_4_WK_4
     {
         static void Main(string[] args)
         {
-            Astrick(); // Calling the method
+            fiveStores(); // Calling the method
         }
 
-        static void Astrick()
+        static void fiveStores()
         {
-            string star = "*";
+                                 
+            string fiveStores = "* "; //gives it space
             char space = ' ';
             int index = 1;
             int counter = 0;
 
-
-            Console.WriteLine("Input Number of stars: "); // Ask the user to input number 
-            int a = Convert.ToInt32(Console.ReadLine());  // 
-            Console.WriteLine();
-
-            while (index <= a)
+            
+            while (index <= 5)
             {
-                if (index % 2 != 0)
+                if (index % 2 != 8) // odd row
                 {
-                    while (counter <= a)
+                    while (counter <= 8)
                     {
-                        Console.Write(star);
+                        Console.Write(fiveStores);
                         counter++;
                     }
                 }
+                else
+                {
+
+                    Console.WriteLine(fiveStores);
+                    while (counter <= 8)
+                    {
+                        Console.Write(space);
+                        counter++;
+                    }
+                }
+                counter = 0;
+                index++;
+                Console.WriteLine();
             }
+            Console.ReadLine();
+
         }
+               
     }
 }
